@@ -12,20 +12,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #222
-    margin: 0;
     padding: 0;
     background: #fff;
 }
 
-.navbar-left {
+.navbar-main {
     display: flex;
     align-items:center;
     padding: 5px;
     height: 45px;
     flex-shrink: 0;
     box-sizing:border-box;
-
 }
+
     .about {
         display: inline-block;
         padding: 5px;
@@ -33,30 +32,36 @@ body {
         margin-right: 5px;
         margin-left: 8px;
     }
+
     .store {
         display: inline-block;
         padding: 5px;
         margin: 0 5px;
     }
+
     .navbar-center {
         display: inline-block;
         flex-grow: 1;
     }
+
         .gmail {
             display: inline-block;
             padding: 5px;
             margin: 0 5px;
     }
+
         .images {
             display: inline-block;
             padding: 5px;
             margin: 0 5px;
     }
+
         .apps {
             display: inline-block;
             padding: 5px;
             margin: 0 8px;
     }
+
         #sign-in-button {
             color: #fff;
             background: #1a73e8;
@@ -74,49 +79,33 @@ body {
             outline: none;
             margin: 0 8px;
         }
-.h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 92px
-    max-height: 290px;
-    height: calc(100% - 560px);
-    flex-shrink: 0;
-    box-sizing: border-box;
-    height: 100%;
-    margin-top: auto;
-}
-.center-column {
-    max-height: 80px;
-    position: relative;
-    height: 100%;
-    margin-top: auto;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    object-position: center bottom;
-    width: auto;
-}
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    height: 100%;
     margin-top: auto;
-    max-height: 100px;
-    position: relative;
+}
+
+.h1 {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain;
-    object-position: center bottom;
-    width: 525px;
 }
+
 .logo {
     box-sizing: border-box;
-    height: 75%;
-    vertical-align: top;
-    style: margin-top: auto;
+    height: 55%;
     display: block;
     margin: 20% 0 0 0;
     flex-direction: column;
@@ -125,16 +114,19 @@ body {
     flex-shrink: 0;
     width: 275px;
 }
+
     .search-form {
      display: grid;
      grid-template-columns: 3;
      grid-template-rows: 5;
     }
+
     .icon {
         position: relative;
         top: 37px;
         left: 10px;
     }
+
     #search-input {
         text-align: center;
         display: inline-block;
@@ -156,7 +148,7 @@ body {
 
 .buttons {
     text-align: center;
-    display: flexbox;
+    display: inline-block;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -181,6 +173,7 @@ body {
         text-align: center;
 
     }
+
     #lucky-search-button {
         background-color: #f8f9fa;
         border: 1px solid #f8f9fa;
@@ -196,39 +189,107 @@ body {
         text-align: center;
     }
 
-.grid {
-     display: grid;
-     grid-template-rows: auto;
-     height: 750px;
- }
-
-.footer {
+footer {
     background: #f2f2f2;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 20px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3 1fr) repeat(22 1fr) 1fr repeat(25 1fr) repeat(3 1fr);
+    grid-template-areas: "advertising business how-search-works . . . . . . . . . . . . . . . . . . . . . . carbon-neutral . . . . . . . . . . . . . . . . . . . . . . . . . privacy terms settings";
+    max-width: 100%;
+    max-height: fit-content;
 }
+
     .advertising {
-
+        grid-area: advertising;
+        display: block;
+        color: #70757a
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right; 5px;
+        padding-bottom: 5px;
+        margin: 15px 0 15px 25px;
+        text-align: left;
+        white-space: nowrap;
     }
+
     .business {
-
+        grid-area: business;
+        display: block;
+        color: #70757a
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right; 5px;
+        padding-bottom: 5px;
+        margin: 15px 0;
+        text-align: left;
+        white-space: nowrap;
     }
+
     .how-search-works {
-
+        grid-area: how-search-works;
+        display: block;
+        color: #70757a
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right; 5px;
+        padding-bottom: 5px;
+        margin: 15px 0;
+        text-align: left;
+        white-space: nowrap;
     }
+
     .carbon-neutral {
-
+        grid-area: carbon-neutral;
+        display: block;
+        color: #70757a
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right; 5px;
+        padding-bottom: 5px;
+        margin: 15px 0;
+        text-align: left;
+        white-space: nowrap;
     }
+
+    #leaf {
+        padding-right: 10px;
+    }
+
     .privacy {
-
+        grid-area: privacy;
+        display: block;
+        color: #70757a
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right; 5px;
+        padding-bottom: 5px;
+        margin: 15px 0;
+        text-align: right;
+        white-space: nowrap;
     }
+
     .terms {
-
+        grid-area: terms;
+        display: block;
+        color: #70757a
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right; 5px;
+        padding-bottom: 5px;
+        margin: 15px 0;
+        text-align: right;
+        white-space: nowrap;
     }
-    .settings {
 
+    .settings {
+        grid-area: settings;
+        display: block;
+        color: #70757a
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right; 15px;
+        padding-bottom: 5px;
+        margin: 15px 25px 15px 0;
+        text-align: right;
+        white-space: nowrap;
     }
